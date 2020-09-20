@@ -1,0 +1,69 @@
+header {
+    text-align: center;
+}
+
+.jumbotron {
+    padding: 10px;
+    margin-bottom: 0px;
+    background: darkolivegreen;
+    color: white;
+}
+
+.row {
+    padding: 0px;
+    margin: 0px;
+}
+
+#search-box {
+    background: #eee;
+}
+
+td {
+    border: 1px solid rgb(212,211,207);
+    background: white;
+    height: 10%;
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 100%;
+    height: 60%;
+}
+
+#search-header {
+    margin-top: 20px;
+}
+
+#current-weather {
+    border: 1px solid rgb(212,211,207);
+    border-radius: 5px;
+    margin: 10px;
+    height: 50vh;
+}
+
+#forecast {
+    margin: 0 10px;
+    height: 28vh;
+}
+
+.col-9 {
+    padding: 0;
+}
+
+.text-content {
+    margin: 30px;
+}
+
+#day-blocks {
+    height: 70%;
+    margin-top: 5%;
+}
+
+.daily {
+    flex: 0 0 18%;
+    max-width: 18%;
+    margin-right: 2%;
+    background: rgb(44,143,230);
+}

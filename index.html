@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color:yellow">
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Weather Dashboard</h1>
+          <p class="lead">Search for your desired city to view the current weather and a 5-day forecast</p>
+        </div>
+    </header>
+    <div class="row wrapper">
+        <section class="col-3" id="search-box">
+            <form>
+                <input type="text" placeholder="City Name" style="width:100%">
+                <input type="submit">
+            </form>
+            <p id="search-header">Search History</p>
+            <table>
+                <tr><td id="hist0">&nbsp</td></tr>
+                <tr><td id="hist1">&nbsp</td></tr>
+                <tr><td id="hist2">&nbsp</td></tr>
+                <tr><td id="hist3">&nbsp</td></tr>
+                <tr><td id="hist4">&nbsp</td></tr>
+                <tr><td id="hist5">&nbsp</td></tr>
+                <tr><td id="hist6">&nbsp</td></tr>
+                <tr><td id="hist7">&nbsp</td></tr>
+                <tr><td id="hist8">&nbsp</td></tr>
+                <tr><td id="hist9">&nbsp</td></tr>
+            </table>
+        </section>
+        <section class="col-9" id="weather-content">
+            <div class="row" id="current-weather">
+                <section class="text-content">
+                    <h2 id="city-name"></h2>
+                    <hr>
+                    <p id="temp"></p>
+                    <p id="humidity"></p>
+                    <p id="wind"></p>
+                    <p id="uv"></p>
+                </section>
+            </div>
+            <div class="row" id="forecast">
+                <div class="col-12">
+                    <h2 class="row" id="forecast-header">5-Day Forecast:</h2>
+                    <section class="row" id="day-blocks">
+                    <div class="card daily col-2">
+                        <div class="card-body"></div>
+                      </div>
+                      <div class="card daily col-2">
+                        <div class="card-body"></div>
+                      </div>
+                      <div class="card daily col-2">
+                        <div class="card-body"></div>
+                      </div>
+                      <div class="card daily col-2">
+                        <div class="card-body"></div>
+                      </div>
+                      <div class="card daily col-2">
+                        <div class="card-body"></div>
+                      </div>
+                    </section>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
