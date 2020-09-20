@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"
+  />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color:yellow">
+<body>
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
           <h1 class="display-4">Weather Dashboard</h1>
@@ -16,9 +22,9 @@
     </header>
     <div class="row wrapper">
         <section class="col-3" id="search-box">
-            <form>
-                <input type="text" placeholder="City Name" style="width:100%">
-                <input type="submit">
+            <form style="display:flex; flex-direction:row;">
+                <input id="name-input" type="text" placeholder="City Name">
+                <button id="submit-btn" type="submit"><i class="fa fa-search"></i></button>
             </form>
             <p id="search-header">Search History</p>
             <table>
@@ -38,38 +44,43 @@
             <div class="row" id="current-weather">
                 <section class="text-content">
                     <h2 id="city-name"></h2>
-                    <hr>
+                    <hr style="display:none">
+                    <img id="weather-icon" style="margin-bottom:20px">
                     <p id="temp"></p>
                     <p id="humidity"></p>
                     <p id="wind"></p>
-                    <p id="uv"></p>
+                    <div class="uv-container" style="display:flex; flex-direction:row;">
+                        <p id="uv">&nbsp</p><p id="uv-index"></p>
+                    </div>
                 </section>
             </div>
             <div class="row" id="forecast">
                 <div class="col-12">
-                    <h2 class="row" id="forecast-header">5-Day Forecast:</h2>
-                    <section class="row" id="day-blocks">
-                    <div class="card daily col-2">
-                        <div class="card-body"></div>
-                      </div>
-                      <div class="card daily col-2">
-                        <div class="card-body"></div>
-                      </div>
-                      <div class="card daily col-2">
-                        <div class="card-body"></div>
-                      </div>
-                      <div class="card daily col-2">
-                        <div class="card-body"></div>
-                      </div>
-                      <div class="card daily col-2">
-                        <div class="card-body"></div>
-                      </div>
-                    </section>
+                    <h2 class="row" id="forecast-header" style="display:none">5-Day Forecast:</h2>
+                    <section class="row" id="day-blocks"></section>
                 </div>
-
             </div>
         </section>
     </div>
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Oops!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" id="x-btn">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>You must input a city name!</p>
+              <p><small>You may click the Close button, the X button, or anywhere outside the modal to close it.</small></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" id="close-btn" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
