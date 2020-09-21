@@ -41,7 +41,7 @@ This project can also be used as a template to learn more about making API calls
 
 ![alt-text](./assets/forecast.png "Forecast Section")
 
-- Upon refresh, the page will also display the weather information for the last searched city. 
+- Upon refresh, the page will also display the weather information for the last searched city.
 
 ## Authors
 
