@@ -6,7 +6,7 @@ This repository consists of an HTML, JavaScript, and CSS file. The HTMl file hol
 
 This page holds a weather application/dashboard. It allows the user to input a city of their choosing and then displays the current weather and a 5-day forecast. The current weather information includes a general description, the date, a relevant weather icon, humidity, temperature, wind speed, and UV index. The 5-day forecast weather information includes the date, a relevant weather icon, temperature, and humidity. Once a city is searched, it is logged to the localStorage and displayed in the "Search History" section of the page. Previously searched cities' weather can be displayed again by simply clicking on the city name in the "Search History" section.
 
-This project focuses on the usage of localStorage, dynamically creating HTMl elements, jQuery, and third party API's. The API used in this project was Open Weather Map API (https://openweathermap.org/api).
+This project focuses on the usage of localStorage, dynamically creating HTMl elements, jQuery, and server side API's. The API used in this project was Open Weather Map API (https://openweathermap.org/api).
 
 ![alt-text](./assets/demo.gif "Demo Video")
 
