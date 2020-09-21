@@ -17,6 +17,7 @@ function displayHistory() {
 
 if (localStorage.length > 0) {
     displayHistory();
+    callAPI(JSON.parse(localStorage.cities)[0]);
 }
 
 // Function to call information from API
@@ -47,6 +48,8 @@ function callAPI(city) {
             method: "GET"
         }).then(function(response) {
             // console.log(response)
+            $("#uv").empty();
+            $("#uv-index").empty();
             $("#uv").prepend("UV Index:");
             $("#uv").css("padding","5px 0")
             $("#uv-index").text(response.value)
@@ -89,13 +92,18 @@ function callAPI(city) {
             // $(".card-body").append(h4);
             var forecastImg = $("<img>");
             forecastImg.attr("src","https://openweathermap.org/img/wn/"+response.list[index].weather[0].icon+"@2x.png");
+            forecastImg.css("max-width","100px");
+            forecastImg.css("margin","0 auto");
+            forecastImg.addClass("forecast-img")
             // $(".card-body").append(forecastImg);
             var forecastTemp = $("<p>");
+            forecastTemp.addClass("forecast-p")
             var C = (parseInt(response.list[index].main.temp)-273.15).toFixed(0);
             var F = parseInt(C * 9/5 + 32).toFixed(0);
             forecastTemp.text("Temperature: "+C+String.fromCharCode(176)+"C / "+F+String.fromCharCode(176)+"F");
             // $(".card-body").append(forecastTemp);
             var forecastHumid = $("<p>");
+            forecastHumid.addClass("forecast-p");
             forecastHumid.text("Humidity: "+response.list[index].main.humidity+"%");
             // $(".card-body").append(forecastHumid);
             $("#daily"+index).append(h4,forecastImg,forecastTemp,forecastHumid);
@@ -155,5 +163,7 @@ $("#submit-btn").on("click", function() {
 
 $("tr").on("click", function() {
     // console.log($(this).text())
+    event.preventDefault();
     callAPI($(this).text());
+    $("#forecast-header").css("display","block")
 })

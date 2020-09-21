@@ -1,3 +1,17 @@
+/* html {
+    height: 100%;
+} */
+
+body {
+    font-family: "Comfortaa", cursive;
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    height: 100%;
+}
+
 header {
     text-align: center;
 }
@@ -16,6 +30,7 @@ header {
 
 #search-box {
     background: #eee;
+    min-height: 100%;
 }
 
 td {
@@ -67,6 +82,7 @@ table {
     max-width: 18%;
     margin-right: 2%;
     background: rgb(44,143,230);
+    color: white;
 }
 
 .Modal {
@@ -100,7 +116,119 @@ table {
       margin-top: 20px;
       background: rgb(58,65,99);
   }
+  
+  #submit-btn:hover {
+      background: rgb(27,31,51);
+  }
 
   .fa-search {
       color:white;
+  }
+
+  h4 {
+      text-align: center;
+      font-size: 1.3rem;
+      padding-top: 8px;
+  }
+
+  .col-12 {
+      position: absolute;
+      bottom: 0;
+  }
+
+  @media screen and (max-height: 1180px) {
+      .forecast-p {
+          font-size: 13px;
+      }
+      h4 {
+          font-size: large;
+      }
+      .forecast-img {
+          max-width: 70px;
+          max-height: 70px;
+      }
+  }
+
+  @media screen and (max-height: 995px) {
+    .forecast-p {
+        font-size: 10px;
+    }
+    h4 {
+        font-size: medium;
+    }
+    .forecast-img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+  }
+
+  @media screen and (min-width: 2404px) {
+      #day-blocks {
+          margin-top: 2%;
+      }
+  }
+
+  @media screen and (max-width: 828px) {
+    .forecast-p {
+        font-size: 7px;
+    }
+    h4 {
+        font-size: small;
+    }
+    .forecast-img {
+        max-width: 30px;
+        max-height: 30px;
+    }
+    #day-blocks {
+        margin-top: 15%;
+    }
+  }
+
+  @media screen and (max-width: 766px) {
+      .daily {
+          max-height: 125px;
+      }
+      h4 {
+          font-size: 12px;
+      }
+      #day-blocks  {
+        margin-top: 2%;
+    }
+    #forecast {
+        height: 20vh;
+    }
+  }
+
+  @media screen and (max-width: 730px) {
+    h4 {
+        font-size: 10px;
+    }
+    .forecast-p {
+        margin: 0;
+    }
+    #forecast {
+        height: 15vh;
+    }
+  }
+
+  @media screen and (max-width: 672px) {
+      .col-12 {
+          bottom: 30px;
+          margin-bottom: 40px;
+      }
+      .daily {
+          max-height: none;
+      }
+      h2 {
+          font-size: 25px;
+      }
+      #temp, #wind, #humidity, #uv, #uv-index {
+          font-size: 12px;
+      }
+  }
+
+  @media screen and (min-width: 1345px) {
+      .forecast-p {
+          text-align: center;
+      }
   }

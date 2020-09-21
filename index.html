@@ -9,7 +9,8 @@
     href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
     crossorigin="anonymous"
-  />
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,13 +21,14 @@
           <p class="lead">Search for your desired city to view the current weather and a 5-day forecast</p>
         </div>
     </header>
-    <div class="row wrapper">
+    <div class="row wrapper" style="position:relative">
         <section class="col-3" id="search-box">
             <form style="display:flex; flex-direction:row;">
                 <input id="name-input" type="text" placeholder="City Name">
                 <button id="submit-btn" type="submit"><i class="fa fa-search"></i></button>
             </form>
-            <p id="search-header">Search History</p>
+            <p id="search-header" style="margin-bottom:0">Search History</p>
+            <p style="margin-bottom:0"><small>Click on a previously searched city to view the weather for that city again</small></p>
             <table>
                 <tr><td id="hist0">&nbsp</td></tr>
                 <tr><td id="hist1">&nbsp</td></tr>
