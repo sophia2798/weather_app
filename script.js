@@ -66,6 +66,18 @@ function callAPI(city) {
                 $("#uv-index").css("background-color","red")
             }
         })
+
+        // Get local time
+        $.ajax({
+            url: "http://api.timezonedb.com/v2.1/get-time-zone?key=7KWZ0204P6RY&format=json&by=position&lng="+lon+"&lat="+lat,
+            method: "GET"
+        }).then(function(response) {
+            // console.log(response)
+            var time = response.formatted.slice(11,16);
+            // console.log(time);
+            var local = moment(time, "hh:mm").format('hh:mm a');
+            $("#local-time").text("Local Time: "+local)
+        });
     })
 
     // Get 5-day forecast

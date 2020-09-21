@@ -4,7 +4,7 @@
 
 This repository consists of an HTML, JavaScript, and CSS file. The HTMl file holds the skeletal framework of the page, the CSS file styles the page, and the JavaScript file provides the functionality to the weather dashboard (i.e. click events, localStorage, etc.).
 
-This page holds a weather application/dashboard. It allows the user to input a city of their choosing and then displays the current weather and a 5-day forecast. The current weather information includes a general description, the date, a relevant weather icon, humidity, temperature, wind speed, and UV index. The 5-day forecast weather information includes the date, a relevant weather icon, temperature, and humidity. Once a city is searched, it is logged to the localStorage and displayed in the "Search History" section of the page. Previously searched cities' weather can be displayed again by simply clicking on the city name in the "Search History" section.
+This page holds a weather application/dashboard. It allows the user to input a city of their choosing and then displays the current weather and a 5-day forecast. The current weather information includes a general description, the date, a relevant weather icon, humidity, temperature, wind speed, local time, and UV index. The 5-day forecast weather information includes the date, a relevant weather icon, temperature, and humidity. Once a city is searched, it is logged to the localStorage and displayed in the "Search History" section of the page. Previously searched cities' weather can be displayed again by simply clicking on the city name in the "Search History" section.
 
 This project focuses on the usage of localStorage, dynamically creating HTMl elements, jQuery, and server side API's. The API used in this project was Open Weather Map API (https://openweathermap.org/api).
 
@@ -33,7 +33,7 @@ This project can also be used as a template to learn more about making API calls
 
 ![alt-text](./assets/searchbox.png "Search Section")
 
-- A current weather section that displays the date, a general weather description, an icon, temperature, humidity, wind speed, and the UV Index. Additionally, the UV Index is color coded depending on the condition (Green - Favorable, Yellow - Moderate, and Red - Dangerous).
+- A current weather section that displays the date, a general weather description, an icon, temperature, humidity, wind speed, local time, and the UV Index. Additionally, the UV Index is color coded depending on the condition (Green - Favorable, Yellow - Moderate, and Red - Dangerous).
 
 ![alt-text](./assets/current.png "Current Weather")
 
@@ -61,3 +61,5 @@ This project can also be used as a template to learn more about making API calls
 - [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
 - [Google Fonts](https://fonts.google.com/)
+
+- [Moment.js](https://momentjs.com/)
