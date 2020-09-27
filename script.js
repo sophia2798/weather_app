@@ -15,7 +15,7 @@ function displayHistory() {
     };
 };
 
-if (localStorage.length > 0) {
+if (localStorage.cities != null) {
     displayHistory();
     callAPI(JSON.parse(localStorage.cities)[0]);
 }
@@ -50,7 +50,7 @@ function callAPI(city) {
             // console.log(response)
             $("#uv").empty();
             $("#uv-index").empty();
-            $("#uv").prepend("UV Index:");
+            $("#uv").html("UV Index:&nbsp");
             $("#uv").css("padding","5px 0")
             $("#uv-index").text(response.value)
             $("#uv-index").css("padding","5px 8px");
