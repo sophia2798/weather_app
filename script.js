@@ -24,7 +24,7 @@ if (localStorage.cities != null) {
 function callAPI(city) {
     // Call API
     $.ajax({
-        url: "http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=e0b82fbe866155125ec89e15985f0d60",
+        url: "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=e0b82fbe866155125ec89e15985f0d60",
         method: "GET"
     }).then(function(response) {
         // console.log(response)
@@ -44,7 +44,7 @@ function callAPI(city) {
         var lon = response.coord.lon;
         var lat = response.coord.lat;
         $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/uvi?appid=e0b82fbe866155125ec89e15985f0d60&lat="+lat+"&lon="+lon,
+            url: "https://api.openweathermap.org/data/2.5/uvi?appid=e0b82fbe866155125ec89e15985f0d60&lat="+lat+"&lon="+lon,
             method: "GET"
         }).then(function(response) {
             // console.log(response)
@@ -69,7 +69,7 @@ function callAPI(city) {
 
         // Get local time
         $.ajax({
-            url: "http://api.timezonedb.com/v2.1/get-time-zone?key=7KWZ0204P6RY&format=json&by=position&lng="+lon+"&lat="+lat,
+            url: "https://api.timezonedb.com/v2.1/get-time-zone?key=7KWZ0204P6RY&format=json&by=position&lng="+lon+"&lat="+lat,
             method: "GET"
         }).then(function(response) {
             // console.log(response)
